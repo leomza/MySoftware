@@ -1,8 +1,22 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
 
-input[type=text], select, textarea {
-  width: 100%;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  width: 90%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -12,7 +26,8 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-input[type=submit], button {
+input[type=submit],
+button {
   background-color: #04AA6D;
   color: white;
   padding: 12px 20px;
@@ -21,7 +36,8 @@ input[type=submit], button {
   cursor: pointer;
 }
 
-input[type=submit]:hover, button:hover {
+input[type=submit]:hover,
+button:hover {
   background-color: #45a049;
 }
 
@@ -29,4 +45,224 @@ input[type=submit]:hover, button:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+#createBtn {
+  margin-left: 25px;
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_submit {
+  display: flex;
+  margin: auto;
+}
+
+/* Modal Edit */
+/* The Close Button */
+.closeEdit {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeEdit:hover,
+.closeEdit:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.post__wrapper {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px;
+}
+
+#logoutBtn {
+  display: none;
+  background-color: indianred;
+}
+
+#loginBtn {
+  display: block;
+}
+
+.post__container {
+  text-align: center;
+  background: peru;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.post__image {
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+}
+
+.post__image-container {
+  margin: 20px 0px;
+}
+
+/* TOP NAV BAR */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: peru;
+}
+
+.topnav__welcome {
+  color: white;
+  position: absolute;
+  left: 75%;
+}
+
+.form_posts {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 45px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.form_posts_subtitle {
+  text-align: center;
+  margin: 25px;
+}
+
+.form_posts_submit {
+  width: 40%;
+  margin: auto;
+  margin-top: 45px;
+}
+
+#previewImage {
+  height: 250px;
+  width: 250px;
+}
+
+.form_posts_image {
+  margin: auto;
+  margin-top: 15px;
+}
+
+.password__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.password__icon {
+  margin-left: 10px;
+}
+
+.icon__trash {
+  background-color: indianred;
+  margin-top: 15px;
+}
+
+.icon__trash:hover {
+  transform: scale(1.5);
+  background-color: indianred;
+}
+
+.icon__edit {
+  background-color: #04AA6D;
+  margin-top: 15px;
+}
+
+.icon__edit:hover {
+  transform: scale(1.5);
+  background-color: #04AA6D;
+}
+
+#adminButtonRol {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formEdit__wrapper {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .post__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px;
+  }
+
+  .post__container {
+    margin-top: 15px;
+  }
 }
